@@ -1,7 +1,7 @@
-import React, { FC } from 'react';
-import { SvgIconProps } from "@/svg/types";
+import React, {FC} from 'react';
+import { SvgIconPropsType } from "@/svg/types";
 
-export const MoonIcon: FC<Partial<SvgIconProps>> = (props) => {
+const MoonIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width="24"
@@ -18,3 +18,5 @@ export const MoonIcon: FC<Partial<SvgIconProps>> = (props) => {
         </svg>
     );
 }
+
+export default MoonIcon;
