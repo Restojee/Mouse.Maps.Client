@@ -1,3 +1,5 @@
+import { ThemeKey } from "@/layout/theme/types";
+
 export const DefaultTheme = {
     colors: {
         brandColor: '#e96b6b',
@@ -85,4 +87,9 @@ export const DefaultTheme = {
         modal: 10,
         dropdown: 5,
     },
+}
+
+export const GlobalThemes = {
+    [ThemeKey.DARK]: DefaultTheme,
+    [ThemeKey.LIGHT]: DefaultTheme
 }

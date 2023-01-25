@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { DefaultTheme } from "./DefaultTheme";
+import { DefaultTheme } from "@/layout/theme/constants";
 
 export const GlobalThemeStyles = createGlobalStyle((theme: typeof DefaultTheme) => ({
     "::-webkit-scrollbar-button": {

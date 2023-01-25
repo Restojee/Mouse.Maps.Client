@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 import { Property } from "csstype";
 import {StyledSidebarSection} from "@/layout/sidebar/styles/StyledSidebarSection";
-import {Typography} from "@/ui/Typography";
+import {Typography} from "@/ui/Typography/styles/Typography";
 
 type Props = {
     label: string;

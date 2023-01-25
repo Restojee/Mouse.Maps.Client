@@ -1,6 +1,6 @@
-import { DefaultTheme } from "@/layout/theme/DefaultTheme";
+import { Constants } from "@/layout/theme/DefaultTheme";
 
-type Theme = typeof DefaultTheme;
+type Theme = typeof Constants;
 
 declare module "styled-components" {
 

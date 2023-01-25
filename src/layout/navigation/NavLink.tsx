@@ -1,7 +1,7 @@
 import {ReactElement} from "react";
 import {Property} from "csstype";
 import {StyledNavLink} from "@/layout/navigation/styles/StyledNavLink";
-import {Typography} from "@/ui/Typography";
+import {Typography} from "@/ui/Typography/styles/Typography";
 
 type NavLinkProps = {
     label: string;

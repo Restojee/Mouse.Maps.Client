@@ -1,18 +1,8 @@
 import React, { Fragment } from "react";
 import { ThemeProvider as StyledThemeProvider} from "styled-components";
-import {DefaultTheme} from "@/layout/theme/DefaultTheme";
-import {GlobalThemeStyles} from "@/layout/theme/GlobalThemeStyles";
-
-type TThemes = {
-    [key in ThemeKey]: GlobalTheme
-}
-
-type GlobalTheme = typeof DefaultTheme;
-
-enum ThemeKey {
-    LIGHT = "LIGHT",
-    DARK = "DARK"
-}
+import { GlobalThemeStyles } from "@/layout/theme/GlobalThemeStyles";
+import { GlobalThemes } from "@/layout/theme/constants";
+import { ThemeKey } from "@/layout/theme/types";
 
 enum MediaKey {
     XS = "XS",
@@ -22,16 +12,11 @@ enum MediaKey {
     XL = "XL"
 }
 
-const GlobalThemes: TThemes = {
-    [ThemeKey.DARK]: DefaultTheme,
-    [ThemeKey.LIGHT]: DefaultTheme
-}
 
 type Props = {
-    themeKey: ThemeKey
+    themeKey: ThemeKey;
     children: React.ReactNode;
 }
-
 export const ThemeProvider = (props: Partial<Props>) => {
     const { themeKey = ThemeKey.LIGHT, children } = props;
     const theme = GlobalThemes[themeKey]
