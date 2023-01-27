@@ -4,6 +4,15 @@ import { MoonIcon } from "@/svg/MoonIcon";
 import { StyledSidebar } from "@/layout/sidebar/styles/StyledSidebar";
 import { SidebarSwitcher } from "@/layout/sidebar/SidebarSwitcher";
 import { SidebarSection } from "@/layout/sidebar/SidebarSection";
+import FavoriteIcon from "../../svg/FavoriteIcon";
+import BookCheckIcon from "@/svg/BookCheckIcon";
+import BookmarkIcon from "@/svg/BookmarkIcon";
+import CommentIcon from "@/svg/CommentIcon";
+import { AddIcon } from "@/svg/AddIcon";
+import OpenBookIcon from "@/svg/OpenBookIcon";
+import BookFillIcon from "@/svg/BookFillIcon";
+import {CommentFillIcon} from "@/svg/CommentFillIcon";
+import BookCheckFillIcon from "@/svg/BookCheckFillIcon";
 
 export const Sidebar = () => {
 
@@ -18,7 +27,7 @@ export const Sidebar = () => {
                 label="Все карты"
                 prepend={ (
                     <StyledNavLinkSection isOpen>
-                        <MoonIcon />
+                        <FavoriteIcon />
                     </StyledNavLinkSection>
                 ) }
                 isExtended
@@ -31,7 +40,7 @@ export const Sidebar = () => {
                 label="Избранное"
                 prepend={ (
                     <StyledNavLinkSection isOpen>
-                        <MoonIcon />
+                        <FavoriteIcon />
                     </StyledNavLinkSection>
                 ) }
                 isExtended
@@ -40,7 +49,7 @@ export const Sidebar = () => {
                 label="Выполненные"
                 prepend={ (
                     <StyledNavLinkSection isOpen>
-                        <MoonIcon />
+                        <BookCheckFillIcon />
                     </StyledNavLinkSection>
                 ) }
                 isExtended
@@ -49,7 +58,7 @@ export const Sidebar = () => {
                 label="Невыполненные"
                 prepend={ (
                     <StyledNavLinkSection isOpen>
-                        <MoonIcon />
+                        <BookFillIcon />
                     </StyledNavLinkSection>
                 ) }
                 isExtended
@@ -58,7 +67,7 @@ export const Sidebar = () => {
                 label="Прокоментированные"
                 prepend={ (
                     <StyledNavLinkSection isOpen>
-                        <MoonIcon />
+                        <CommentFillIcon />
                     </StyledNavLinkSection>
                 ) }
                 isExtended
@@ -66,8 +75,8 @@ export const Sidebar = () => {
             <NavLink
                 label="Карты с заметкой"
                 prepend={ (
-                    <StyledNavLinkSection>
-                        <MoonIcon />
+                    <StyledNavLinkSection isOpen>
+                        <BookmarkIcon />
                     </StyledNavLinkSection>
                 ) }
                 isExtended

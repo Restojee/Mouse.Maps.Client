@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
 export const AddIcon: FC <SvgIconPropsType> = (props) => {

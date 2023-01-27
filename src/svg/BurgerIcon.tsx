@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
 const BurgerIcon: FC<SvgIconPropsType> = (props) => {

@@ -8,7 +8,7 @@ export const StyledPageWrapper = styled.div(({ theme, ...props }) => ({
     margin: "10px 0",
     flexGrow: 1,
     backgroundColor: theme.colors.secondary,
-    borderRadius: theme.blockSettings.siteBorder,
+    borderRadius: "20px 0 0 20px",
     [`@media all and (max-width: ${ theme.sizes.media.medium }px)`]: {
         marginBottom: 0
     }
