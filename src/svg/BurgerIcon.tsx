@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const BurgerIcon: FC<SvgIconPropsType> = (props) => {
+export const BurgerIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width="24"
@@ -15,5 +15,3 @@ const BurgerIcon: FC<SvgIconPropsType> = (props) => {
         </svg>
     );
 }
-
-export default BurgerIcon;

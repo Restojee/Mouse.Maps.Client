@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const LeftSidebarArrowIcon: FC<SvgIconPropsType> = (props) => {
+export const LeftSidebarArrowIcon: FC<SvgIconPropsType> = (props) => {
 
     return (
             <svg
@@ -18,4 +18,3 @@ const LeftSidebarArrowIcon: FC<SvgIconPropsType> = (props) => {
     );
 };
 
-export default LeftSidebarArrowIcon;

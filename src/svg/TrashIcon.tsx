@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const TrashIcon: FC<SvgIconPropsType> = (props) => {
+export const TrashIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width={props.size || '24px'}
@@ -24,5 +24,3 @@ const TrashIcon: FC<SvgIconPropsType> = (props) => {
         </svg>
     );
 }
-
-export default TrashIcon;

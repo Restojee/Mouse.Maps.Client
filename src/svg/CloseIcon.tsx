@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const CloseIcon: FC<SvgIconPropsType> = (props) => {
+export const CloseIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width={props.size || '24px'}
@@ -26,5 +26,3 @@ const CloseIcon: FC<SvgIconPropsType> = (props) => {
         </svg>
     );
 }
-
-export default CloseIcon;

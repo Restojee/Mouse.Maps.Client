@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const NotificationsIcon: FC<SvgIconPropsType> = (props) => {
+export const NotificationsIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width="24"
@@ -23,4 +23,3 @@ const NotificationsIcon: FC<SvgIconPropsType> = (props) => {
     );
 }
 
-export default NotificationsIcon;

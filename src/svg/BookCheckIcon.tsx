@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const BookCheckIcon: FC<SvgIconPropsType> = (props) => {
+export const BookCheckIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width="24"
@@ -24,4 +24,3 @@ const BookCheckIcon: FC<SvgIconPropsType> = (props) => {
     );
 }
 
-export default BookCheckIcon;

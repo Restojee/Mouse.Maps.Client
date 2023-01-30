@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const ChartIcon: FC<SvgIconPropsType> = (props) => {
+export const ChartIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width="24"
@@ -22,5 +22,3 @@ const ChartIcon: FC<SvgIconPropsType> = (props) => {
         </svg>
     );
 }
-
-export default ChartIcon;

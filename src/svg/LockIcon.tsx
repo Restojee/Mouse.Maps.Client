@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const LockIcon: FC<SvgIconPropsType> = (props) => {
+export const LockIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width="24"
@@ -24,5 +24,3 @@ const LockIcon: FC<SvgIconPropsType> = (props) => {
         </svg>
     );
 }
-
-export default LockIcon;

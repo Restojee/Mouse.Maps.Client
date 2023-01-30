@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const ChatFillIcon: FC<SvgIconPropsType> = (props) => {
+export const ChatFillIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width="24"
@@ -18,5 +18,3 @@ const ChatFillIcon: FC<SvgIconPropsType> = (props) => {
         </svg>
     );
 }
-
-export default ChatFillIcon;
