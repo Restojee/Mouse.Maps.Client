@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const EditFillIcon: FC<SvgIconPropsType> = (props) => {
+export const EditFillIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width={props.size || '24px'}
@@ -18,5 +18,3 @@ const EditFillIcon: FC<SvgIconPropsType> = (props) => {
         </svg>
     );
 }
-
-export default EditFillIcon;

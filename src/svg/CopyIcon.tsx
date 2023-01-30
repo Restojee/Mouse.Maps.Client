@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const CopyIcon: FC<SvgIconPropsType> = (props) => {
+export const CopyIcon: FC<SvgIconPropsType> = (props) => {
 
     return (
         <svg
@@ -23,5 +23,3 @@ const CopyIcon: FC<SvgIconPropsType> = (props) => {
         </svg>
     );
 }
-
-export default CopyIcon;

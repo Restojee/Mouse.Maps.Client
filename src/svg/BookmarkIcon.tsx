@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const BookmarkIcon: FC<SvgIconPropsType> = (props) => {
+export const BookmarkIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width="24"
@@ -19,5 +19,3 @@ const BookmarkIcon: FC<SvgIconPropsType> = (props) => {
         </svg>
     );
 }
-
-export default BookmarkIcon;

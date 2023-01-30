@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const SortIcon: FC<SvgIconPropsType> = (props) => {
+export const SortIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width="24"
@@ -31,4 +31,3 @@ const SortIcon: FC<SvgIconPropsType> = (props) => {
     );
 }
 
-export default SortIcon;

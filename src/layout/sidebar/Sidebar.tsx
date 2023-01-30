@@ -4,15 +4,11 @@ import { MoonIcon } from "@/svg/MoonIcon";
 import { StyledSidebar } from "@/layout/sidebar/styles/StyledSidebar";
 import { SidebarSwitcher } from "@/layout/sidebar/SidebarSwitcher";
 import { SidebarSection } from "@/layout/sidebar/SidebarSection";
-import FavoriteIcon from "../../svg/FavoriteIcon";
-import BookCheckIcon from "@/svg/BookCheckIcon";
-import BookmarkIcon from "@/svg/BookmarkIcon";
-import CommentIcon from "@/svg/CommentIcon";
-import { AddIcon } from "@/svg/AddIcon";
-import OpenBookIcon from "@/svg/OpenBookIcon";
-import BookFillIcon from "@/svg/BookFillIcon";
 import {CommentFillIcon} from "@/svg/CommentFillIcon";
-import BookCheckFillIcon from "@/svg/BookCheckFillIcon";
+import {FavoriteIcon} from "@/svg/FavoriteIcon";
+import {BookCheckFillIcon} from "@/svg/BookCheckFillIcon";
+import {BookFillIcon} from "@/svg/BookFillIcon";
+import {BookmarkIcon} from "@/svg/BookmarkIcon";
 
 export const Sidebar = () => {
 
@@ -64,7 +60,7 @@ export const Sidebar = () => {
                 isExtended
             />
             <NavLink
-                label="Прокоментированные"
+                label="Прокомментированные"
                 prepend={ (
                     <StyledNavLinkSection isOpen>
                         <CommentFillIcon />

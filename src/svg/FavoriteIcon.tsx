@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
-const FavoriteIcon: FC<SvgIconPropsType> = (props) => {
+export const FavoriteIcon: FC<SvgIconPropsType> = (props) => {
     return (
         <svg
             width={props.size || '24px'}
@@ -19,4 +19,3 @@ const FavoriteIcon: FC<SvgIconPropsType> = (props) => {
     );
 }
 
-export default FavoriteIcon;
