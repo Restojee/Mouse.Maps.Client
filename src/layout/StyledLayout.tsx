@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import {Property} from "csstype";
 
-export const StyledLayout = styled.div(({ theme, ...props }) => ({
+export const StyledLayout = styled.div(({ theme }) => ({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -15,3 +14,8 @@ export const StyledLayout = styled.div(({ theme, ...props }) => ({
         padding: "0 10px"
     },
 }))
+
+export const StyledWrapper = styled.div({
+    display: "flex",
+    flexGrow: 1,
+})
