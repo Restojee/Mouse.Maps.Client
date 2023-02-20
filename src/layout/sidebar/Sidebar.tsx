@@ -1,6 +1,5 @@
 import { NavLink } from "@/layout/navigation/NavLink";
 import { StyledNavLinkSection } from "@/layout/navigation/styles/StyledNavLinkSection";
-import { MoonIcon } from "@/svg/MoonIcon";
 import { StyledSidebar } from "@/layout/sidebar/styles/StyledSidebar";
 import { SidebarSwitcher } from "@/layout/sidebar/SidebarSwitcher";
 import { SidebarSection } from "@/layout/sidebar/SidebarSection";
@@ -9,6 +8,9 @@ import {FavoriteIcon} from "@/svg/FavoriteIcon";
 import {BookCheckFillIcon} from "@/svg/BookCheckFillIcon";
 import {BookFillIcon} from "@/svg/BookFillIcon";
 import {BookmarkIcon} from "@/svg/BookmarkIcon";
+import {AddIcon} from "@/svg/AddIcon";
+import {CloseIcon} from "@/svg/CloseIcon";
+import {WidgetIcon} from "@/svg/WidgetIcon";
 
 export const Sidebar = () => {
 
@@ -23,7 +25,7 @@ export const Sidebar = () => {
                 label="Все карты"
                 prepend={ (
                     <StyledNavLinkSection isOpen>
-                        <FavoriteIcon />
+                        <WidgetIcon/>
                     </StyledNavLinkSection>
                 ) }
                 isExtended
@@ -81,7 +83,7 @@ export const Sidebar = () => {
                 label="Поиск по тегам"
                 append={ (
                     <StyledNavLinkSection isOpen>
-                        <MoonIcon />
+                        <AddIcon />
                     </StyledNavLinkSection>
                 ) }
                 isOpen
@@ -90,7 +92,7 @@ export const Sidebar = () => {
                 label="Тег 1"
                 append={ (
                     <StyledNavLinkSection>
-                        <MoonIcon />
+                        <CloseIcon />
                     </StyledNavLinkSection>
                 ) }
                 justifyContent="space-between"
@@ -100,7 +102,7 @@ export const Sidebar = () => {
                 label="Тег 2"
                 append={ (
                     <StyledNavLinkSection>
-                        <MoonIcon />
+                        <CloseIcon />
                     </StyledNavLinkSection>
                 ) }
                 justifyContent="space-between"
@@ -110,7 +112,7 @@ export const Sidebar = () => {
                 label="Тег 3"
                 append={ (
                     <StyledNavLinkSection>
-                        <MoonIcon />
+                        <CloseIcon />
                     </StyledNavLinkSection>
                 ) }
                 justifyContent="space-between"
