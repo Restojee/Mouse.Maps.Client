@@ -46,10 +46,7 @@ export const StyledNavLink = styled.div<Props>(({
         }
     },
     ...isChecked && {
-        backgroundColor: isOpen
-            ? `rgba(255, 255, 255, 0.05)`
-            : `rgba(255, 255, 255, 0.1)`,
-        pointerEvents: "none"
+        backgroundColor: "rgba(255, 255, 255, 0.1)",
     },
     "&:hover": {
         backgroundColor: isOpen
