@@ -5,11 +5,12 @@ import {Notifications} from "@/layout/drawer/Notifications/Notifications";
 import {Info} from "@/layout/drawer/Info/Info";
 
 type Props = {
-    activeTab: TabsType
+    activeTab: TabsType,
+    isOpen: boolean
 }
 export const Drawer = (props: Props) => {
     return (
-        <StyledDrawer>
+        <StyledDrawer isOpen={props.isOpen}>
             {getTabsContent(props.activeTab)}
         </StyledDrawer>
     )

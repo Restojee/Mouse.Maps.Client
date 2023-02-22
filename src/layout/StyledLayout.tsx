@@ -7,6 +7,7 @@ export const StyledLayout = styled.div(({ theme }) => ({
     maxHeight: "100vh",
     height: "100vh",
     width: "100%",
+    padding: "10px 0",
     fontSize: theme.font.fontSize,
     backgroundColor: theme.colors.primary,
     "@media all and (max-width: ${ baseTheme.sizes.media.medium }px)": {
@@ -15,7 +16,10 @@ export const StyledLayout = styled.div(({ theme }) => ({
     },
 }))
 
-export const StyledWrapper = styled.div({
+export const StyledWrapper = styled.div(({theme}) => ({
     display: "flex",
     flexGrow: 1,
-})
+    backgroundColor: theme.colors.secondary,
+    borderRadius: 20,
+    overflow: "hidden"
+}))

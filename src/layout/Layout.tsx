@@ -19,7 +19,7 @@ export const Layout = (props: Props) => {
             <Sidebar />
             <StyledWrapper>
                 {children}
-                {isOpen && <Drawer activeTab={activeTab} />}
+                {isOpen && <Drawer isOpen={isOpen} activeTab={activeTab} />}
             </StyledWrapper>
             <Panel
                 setActiveTab={setActiveTab}
