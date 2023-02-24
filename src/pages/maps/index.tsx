@@ -5,8 +5,11 @@ import { StyledPageWrapper } from "@/layout/page/styles/StyledPageWrapper";
 import { StyledPageContent } from "@/layout/page/styles/StyledPageContent";
 import { MapCard } from "@/modules/map/MapCard";
 import {StyledMapsGrid} from "@/modules/map/styles/StyledMapsGrid";
+import {useGetMapsQuery} from "@/api/maps";
 
 export default function Maps()  {
+
+    console.log(useGetMapsQuery)
     return (
         <Layout>
             <StyledPageWrapper>
