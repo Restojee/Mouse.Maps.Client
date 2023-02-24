@@ -9,7 +9,8 @@ import {useGetMapsQuery} from "@/api/maps";
 
 export default function Maps()  {
 
-    console.log(useGetMapsQuery)
+    const {data: maps} = useGetMapsQuery({page: 0, userId: '1', size: 1})
+    console.log(maps)
     return (
         <Layout>
             <StyledPageWrapper>
