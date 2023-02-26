@@ -45,6 +45,7 @@ export const Panel = (props: PanelProps) => {
                     label={el.label}
                     isChecked={el.tab === props.activeTab}
                     onClick={() => onTabClickHandler(el.tab)}
+                    margin={el.margin}
                     prepend={(
                         <StyledNavLinkSection>
                             {el.icon}
