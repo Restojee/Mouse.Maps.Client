@@ -7,7 +7,7 @@ type NavLinkProps = {
     label?: string;
     prepend?: ReactElement;
     append?: ReactElement;
-    isExtended?: boolean;
+    isOpen?: boolean;
     isChecked?: boolean;
     border?: boolean;
 
@@ -28,7 +28,7 @@ export const NavLink = (props: NavLinkProps) => {
         append,
         margin,
         border,
-        isExtended,
+        isOpen,
         isChecked,
         justifyContent,
         isDisabled,
@@ -46,7 +46,7 @@ export const NavLink = (props: NavLinkProps) => {
             onClick={isDisabled ? undefined : onClick}
         >
             {prepend}
-            {isExtended && <Typography>{label}</Typography>}
+            {isOpen && <Typography>{label}</Typography>}
             {append}
         </StyledNavLink>
     )

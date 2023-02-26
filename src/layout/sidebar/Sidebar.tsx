@@ -11,15 +11,22 @@ import {BookmarkIcon} from "@/svg/BookmarkIcon";
 import {AddIcon} from "@/svg/AddIcon";
 import {CloseIcon} from "@/svg/CloseIcon";
 import {WidgetIcon} from "@/svg/WidgetIcon";
+import {useState} from "react";
 
 export const Sidebar = () => {
 
+    const [isOpen, setIsOpen] = useState(true)
+    const [isPointBlockOpen, setIsPointBlockOpen] = useState(false);
+
     return (
-        <StyledSidebar isOpen>
-            <SidebarSwitcher />
+        <StyledSidebar isOpen={isOpen}>
+            <SidebarSwitcher
+                onClick={() => setIsOpen(!isOpen)}
+                isOpen={isOpen}
+            />
             <SidebarSection
                 label="Общие разделы"
-                isOpen
+                isOpen={isOpen}
             />
             <NavLink
                 label="Все карты"
@@ -28,11 +35,11 @@ export const Sidebar = () => {
                         <WidgetIcon/>
                     </StyledNavLinkSection>
                 ) }
-                isExtended
+                isOpen={isOpen}
             />
             <SidebarSection
                 label="Моя коллекция"
-                isOpen
+                isOpen={isOpen}
             />
             <NavLink
                 label="Избранное"
@@ -41,7 +48,7 @@ export const Sidebar = () => {
                         <FavoriteIcon />
                     </StyledNavLinkSection>
                 ) }
-                isExtended
+                isOpen={isOpen}
             />
             <NavLink
                 label="Выполненные"
@@ -50,7 +57,7 @@ export const Sidebar = () => {
                         <BookCheckFillIcon />
                     </StyledNavLinkSection>
                 ) }
-                isExtended
+                isOpen={isOpen}
             />
             <NavLink
                 label="Невыполненные"
@@ -59,7 +66,7 @@ export const Sidebar = () => {
                         <BookFillIcon />
                     </StyledNavLinkSection>
                 ) }
-                isExtended
+                isOpen={isOpen}
             />
             <NavLink
                 label="Прокомментированные"
@@ -68,7 +75,7 @@ export const Sidebar = () => {
                         <CommentFillIcon />
                     </StyledNavLinkSection>
                 ) }
-                isExtended
+                isOpen={isOpen}
             />
             <NavLink
                 label="Карты с заметкой"
@@ -77,7 +84,7 @@ export const Sidebar = () => {
                         <BookmarkIcon />
                     </StyledNavLinkSection>
                 ) }
-                isExtended
+                isOpen={isOpen}
             />
             <SidebarSection
                 label="Поиск по тегам"
@@ -86,7 +93,7 @@ export const Sidebar = () => {
                         <AddIcon />
                     </StyledNavLinkSection>
                 ) }
-                isOpen
+                isOpen={isOpen}
             />
             <NavLink
                 label="Тег 1"
@@ -96,7 +103,7 @@ export const Sidebar = () => {
                     </StyledNavLinkSection>
                 ) }
                 justifyContent="space-between"
-                isExtended
+                isOpen={isOpen}
             />
             <NavLink
                 label="Тег 2"
@@ -106,7 +113,7 @@ export const Sidebar = () => {
                     </StyledNavLinkSection>
                 ) }
                 justifyContent="space-between"
-                isExtended
+                isOpen={isOpen}
             />
             <NavLink
                 label="Тег 3"
@@ -116,7 +123,7 @@ export const Sidebar = () => {
                     </StyledNavLinkSection>
                 ) }
                 justifyContent="space-between"
-                isExtended
+                isOpen={isOpen}
             />
         </StyledSidebar>
     )
