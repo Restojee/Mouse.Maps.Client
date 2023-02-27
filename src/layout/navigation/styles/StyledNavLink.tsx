@@ -3,17 +3,14 @@ import styled from "styled-components";
 
 type Props = {
     margin?: Property.Margin;
-    marginTop?: Property.MarginTop;
     justifyContent?: Property.JustifyContent;
     gap?: Property.Gap;
-
     isOpen?: boolean;
     withBorder?: boolean
     isChecked?: boolean;
 }
 export const StyledNavLink = styled.div<Props>(({
   theme,
-  marginTop,
   margin,
   isOpen,
   withBorder,
@@ -30,8 +27,6 @@ export const StyledNavLink = styled.div<Props>(({
     cursor: "pointer",
     transition: "transition",
     gap: gap,
-    marginBottom: isOpen ? `2px` : `10px`,
-    marginTop: marginTop,
     margin: margin,
     justifyContent: justifyContent,
     ...withBorder && {
@@ -39,8 +34,8 @@ export const StyledNavLink = styled.div<Props>(({
             content: '""',
             position: "absolute",
             bottom: -5,
-            right: 0,
-            width: "100%",
+            right: 5,
+            left: 5,
             height: 1,
             backgroundColor: "rgba(255, 255, 255, 0.2)",
         }

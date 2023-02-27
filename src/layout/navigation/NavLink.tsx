@@ -10,14 +10,11 @@ type NavLinkProps = {
     isOpen?: boolean;
     isChecked?: boolean;
     border?: boolean;
-
     margin?: Property.Margin;
     gap?: Property.Gap;
     justifyContent?: Property.JustifyContent;
-
     isDisabled?: boolean;
     isVisible?: boolean;
-
     onClick?: () => void;
 }
 export const NavLink = (props: NavLinkProps) => {
@@ -41,6 +38,7 @@ export const NavLink = (props: NavLinkProps) => {
             margin={margin}
             withBorder={border}
             gap={gap}
+            isOpen={isOpen}
             isChecked={isChecked}
             justifyContent={justifyContent}
             onClick={isDisabled ? undefined : onClick}
