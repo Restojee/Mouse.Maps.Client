@@ -28,6 +28,8 @@ export const Panel = (props: PanelProps) => {
         if(props.activeTab === tab && props.isOpen) props.setIsOpen(false)
     }
 
+    const avatar = "https://i.imgur.com/P11sXfz.png"
+
     return (
         <StyledPanel>
             <NavLink
@@ -38,7 +40,7 @@ export const Panel = (props: PanelProps) => {
                     </StyledNavLinkSection>
                 }
             />
-            <Avatar size="46px" />
+            <Avatar size="46px" image={avatar} />
             {tabsData.map(el => (
                 <NavLink
                     key={el.tab}
@@ -46,6 +48,7 @@ export const Panel = (props: PanelProps) => {
                     isChecked={el.tab === props.activeTab}
                     onClick={() => onTabClickHandler(el.tab)}
                     margin={el.margin}
+                    border={el.border}
                     prepend={(
                         <StyledNavLinkSection>
                             {el.icon}
@@ -75,7 +78,7 @@ export const Panel = (props: PanelProps) => {
 }
 
 const tabsData: TabsDataType[] = [
-    {label: "Уведомления", tab: 'notifications', icon: <NotificationsIcon />},
+    {label: "Уведомления", tab: 'notifications', border: true, icon: <NotificationsIcon />},
     {label: "Полезная инфа", tab: 'info', icon: <PaperIcon />},
     {label: "Статистика", tab: 'statistic', icon: <ChartIcon />},
     {label: "Чат", tab: 'chat', icon: <ChatFillIcon />},
@@ -87,5 +90,6 @@ type TabsDataType = {
     label: string,
     tab: TabsType,
     icon: ReactNode,
+    border?: boolean,
     margin?: Property.Margin
 }
