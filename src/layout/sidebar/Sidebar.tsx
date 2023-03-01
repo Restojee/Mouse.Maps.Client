@@ -43,7 +43,11 @@ export const Sidebar = () => {
                     isOpen={isOpen}
                 />
             </StyledBox>
-            <StyledBox direction={"column"} gap={isOpen ? 5 : 10}>
+            <StyledBox
+                margin={isOpen ? "0" : "-10px 0 0 0"}
+                direction={"column"}
+                gap={isOpen ? 5 : 10}
+            >
                 <SidebarSection
                     label="Моя коллекция"
                     isOpen={isOpen}

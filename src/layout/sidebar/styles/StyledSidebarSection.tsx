@@ -27,11 +27,7 @@ export const StyledSidebarSection = styled.div<Partial<Props>>(({
     padding: isOpen ? `0 20px 10px 20px` : `0 20px`,
     position: "relative",
     paddingTop: 5,
-    marginTop: -5,
     transition: '0.3s',
-    "&:first-of-type": {
-        marginTop: 0
-    },
     justifyContent: justifyContent,
     gap: gap
 }))
