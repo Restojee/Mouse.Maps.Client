@@ -44,7 +44,7 @@ export const NavLink = (props: NavLinkProps) => {
             onClick={isDisabled ? undefined : onClick}
         >
             {prepend}
-            {isOpen && label && <Typography>{label}</Typography>}
+            {isOpen && label && <Typography isEllipsis>{label}</Typography>}
             {append}
         </StyledNavLink>
     )

@@ -28,7 +28,7 @@ export const Sidebar = () => {
                 onClick={() => setIsOpen(!isOpen)}
                 isOpen={isOpen}
             />
-            <StyledBox direction={"column"} gap={isOpen ? 5 : 10}>
+            <StyledBox transition={"0.3s"} direction={"column"} gap={isOpen ? 5 : 10}>
                 <SidebarSection
                     label="Общие разделы"
                     isOpen={isOpen}
@@ -44,6 +44,7 @@ export const Sidebar = () => {
                 />
             </StyledBox>
             <StyledBox
+                transition={"0.3s"}
                 margin={isOpen ? "0" : "-10px 0 0 0"}
                 direction={"column"}
                 gap={isOpen ? 5 : 10}
