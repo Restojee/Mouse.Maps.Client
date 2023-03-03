@@ -10,7 +10,6 @@ type Props = {
     justifyContent: Property.JustifyContent;
     append: ReactElement;
     prepend: ReactElement;
-    isExtended: boolean;
 }
 export const SidebarSection = (props: Partial<Props>) => {
     const {
@@ -19,7 +18,6 @@ export const SidebarSection = (props: Partial<Props>) => {
         gap = "15px",
         prepend,
         append,
-        isExtended,
         justifyContent
     } = props;
     
