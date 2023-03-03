@@ -1,21 +1,15 @@
-import {StyledAvatar} from "@/layout/avatar/styles/StyledAvatar";
-import {Property} from "csstype";
+import {StyledAvatar, StyledAvatarWrapper} from "@/layout/avatar/styles/StyledAvatar";
 
 type Props = {
-    size?: Property.Width;
-    image: string;
-    margin?: Property.Margin
+    size?: string;
 }
 export const Avatar = (props: Props) => {
 
-    const {size = "80px", image, margin} = props
+    const { size = "80px" } = props
 
     return (
-        <StyledAvatar
-            size={size}
-            margin={margin}
-            src={image}
-            alt={"avatar"}
-        />
+        <StyledAvatarWrapper>
+            <StyledAvatar />
+        </StyledAvatarWrapper>
     )
 }

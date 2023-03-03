@@ -19,7 +19,6 @@ type Props = {
     overflow: Property.Overflow,
     addSize: Property.FontSize,
     wrap: Property.FlexWrap,
-    transition: Property.Transition,
     grow: Property.FlexGrow,
     cursor: Property.Cursor,
     isClickable: boolean,
@@ -47,7 +46,6 @@ export const StyledBox = styled.div<Partial<Props>>(({ theme, ...props }) => ({
     flexGrow: props.grow,
     flexWrap: props.wrap,
     columnGap: props.gap,
-    transition: props.transition,
     cursor: props.cursor,
     ...props.stylized && {
         padding: 15,

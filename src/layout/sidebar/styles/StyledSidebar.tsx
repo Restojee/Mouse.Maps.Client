@@ -17,7 +17,6 @@ export const StyledSidebar = styled.div<Partial<Props>>(({
     width: "100%",
     maxHeight: "100%",
     height: "100%",
-    rowGap: 10,
     position: "relative",
     transitionProperty: "min-width, max-width, width",
     padding: `10px 5px`,
@@ -27,7 +26,6 @@ export const StyledSidebar = styled.div<Partial<Props>>(({
     transition: '0.3s',
     ...isOpen && {
         maxWidth: theme.sizes.leftSidebar.width,
-        overflow: "hidden",
-        rowGap: 20,
+        overflow: "hidden"
     }
 }))

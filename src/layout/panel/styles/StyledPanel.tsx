@@ -4,7 +4,6 @@ export const StyledPanel = styled.div(props => ({
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    rowGap: 10,
     width: props.theme.sizes.sitePanel.width,
     minWidth: props.theme.sizes.sitePanel.width,
     maxWidth: props.theme.sizes.sitePanel.width,

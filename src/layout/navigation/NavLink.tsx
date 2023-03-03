@@ -4,17 +4,20 @@ import {StyledNavLink} from "@/layout/navigation/styles/StyledNavLink";
 import {Typography} from "@/ui/Typography/styles/Typography";
 
 type NavLinkProps = {
-    label?: string;
+    label: string;
     prepend?: ReactElement;
     append?: ReactElement;
-    isOpen?: boolean;
+    isExtended?: boolean;
     isChecked?: boolean;
     border?: boolean;
+
     margin?: Property.Margin;
     gap?: Property.Gap;
     justifyContent?: Property.JustifyContent;
+
     isDisabled?: boolean;
     isVisible?: boolean;
+
     onClick?: () => void;
 }
 export const NavLink = (props: NavLinkProps) => {
@@ -25,7 +28,7 @@ export const NavLink = (props: NavLinkProps) => {
         append,
         margin,
         border,
-        isOpen,
+        isExtended,
         isChecked,
         justifyContent,
         isDisabled,
@@ -35,17 +38,17 @@ export const NavLink = (props: NavLinkProps) => {
 
     return (
         <StyledNavLink
-            margin={margin}
-            withBorder={border}
-            gap={gap}
-            isOpen={isOpen}
-            isChecked={isChecked}
-            justifyContent={justifyContent}
-            onClick={isDisabled ? undefined : onClick}
+            margin={ margin }
+            withBorder={ border }
+            gap={ gap }
+            justifyContent={ justifyContent }
+            onClick={ isDisabled ? undefined : onClick }
         >
-            {prepend}
-            {isOpen && label && <Typography isEllipsis>{label}</Typography>}
-            {append}
+            { prepend }
+
+            { isExtended && <Typography>{ label }</Typography> }
+
+            { append }
         </StyledNavLink>
     )
 }

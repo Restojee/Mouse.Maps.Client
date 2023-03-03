@@ -1,22 +1,17 @@
 import styled from "styled-components";
 
-export const StyledWelcomeButton = styled.div(({theme}) => ({
+export const StyledWelcomeButton = styled.div(props => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    fontFamily: theme.font.logoFont,
     cursor: "pointer",
+    fontSize: "70px",
     color: "#fff",
     position: "relative",
     animationDuration: "1s",
     animationTimingFunction: "linear",
     animationDirection: "alternate",
-    animationIterationCount: "infinite",
+    animationIterationC: "infinite",
     transition: "0.2s",
-    transitionProperty: "color",
-    "&:hover": {
-        animationPlayState: "paused",
-        color: theme.colors.brandColor,
-        textShadow: `0 0 30px ${theme.colors.brandColor}`,
-    }
-}));
+    transitionProperty: "color"
+}))

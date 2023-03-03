@@ -9,11 +9,9 @@ export const StyledSidebarSwitcher = styled.div<Partial<Props>>(({ isOpen }) => 
     width: "100%",
     height: "min-content",
     padding: "10px",
-    marginBottom: -20,
-    transition: "0.2s",
     cursor: "pointer",
     svg: {
-        transition: "0.2s",
+        transition: "0.3s",
         "&:hover": {
             transform: "translateX(10px)"
         }
@@ -25,8 +23,5 @@ export const StyledSidebarSwitcher = styled.div<Partial<Props>>(({ isOpen }) => 
                 transform: "rotate(180deg) translateX(10px)",
             }
         }
-    },
-    "&:hover": {
-        transform: "scale(0.9)"
     }
 }))

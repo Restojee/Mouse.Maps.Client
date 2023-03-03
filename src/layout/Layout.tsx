@@ -1,5 +1,5 @@
-import {ReactNode, useState} from "react";
-import {Panel, TabsType} from "@/layout/panel/Panel";
+import {ReactNode} from "react";
+import {Panel} from "@/layout/panel/Panel";
 import {Drawer} from "@/layout/drawer/Drawer";
 import {Sidebar} from "@/layout/sidebar/Sidebar";
 import {StyledLayout, StyledWrapper} from "@/layout/StyledLayout";
@@ -11,22 +11,14 @@ export const Layout = (props: Props) => {
 
     const {children} = props;
 
-    const [isOpen, setIsOpen] = useState(true)
-    const [activeTab, setActiveTab] = useState<TabsType>('notifications')
-
     return (
         <StyledLayout>
             <Sidebar />
             <StyledWrapper>
                 {children}
-                {isOpen && <Drawer isOpen={isOpen} activeTab={activeTab} />}
+                <Drawer activeTab="notifications" />
             </StyledWrapper>
-            <Panel
-                setActiveTab={setActiveTab}
-                activeTab={activeTab}
-                isOpen={isOpen}
-                setIsOpen={setIsOpen}
-            />
+            <Panel activeTab="notifications" isOpen />
         </StyledLayout>
     )
 }

@@ -11,6 +11,7 @@ export const PageFooter = (props: Partial<Props>) => {
         <StyledPagePanel top>
             <StyledBox width="100%" justify="space-between">
                 <StyledBox>
+
                 </StyledBox>
                 <StyledBox>
                     <PagePanelSection />
