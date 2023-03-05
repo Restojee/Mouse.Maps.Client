@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export type Props = {
+type Props = {
     isOpen: boolean;
 }
 export const StyledSidebarSwitcher = styled.div<Partial<Props>>(({ isOpen }) => ({
