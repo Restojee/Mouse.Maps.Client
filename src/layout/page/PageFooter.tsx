@@ -3,10 +3,12 @@ import { StyledBox } from "@/ui/Box/styles/StyledBox";
 import { PagePanelSection } from "@/layout/page/PagePanelSection";
 import { StyledPagePanel } from "@/layout/page/styles/StyledPagePanel";
 import { AddRoundIcon } from "@/svg/AddRoundIcon";
-import { DefaultTheme, useTheme } from "styled-components";
+import { useTheme } from "styled-components";
 import PagePanelItem from "@/layout/page/PagePanelItem";
 import FormElement from "@/ui/Form/Form";
 import { AddImageIcon } from "@/svg/AddImageIcon";
+import { PointBlock } from "@/ui/PointBlock/PointBlock";
+import { DefaultTheme } from "@/layout/theme/constants";
 
 type Props = {
     children: ReactNode;
@@ -14,7 +16,7 @@ type Props = {
 export const PageFooter = (props: Partial<Props>) => {
     const [isPointBlockOpen, setIsPointBlockOpen] = useState(false);
 
-    const theme = useTheme()
+    const theme = useTheme() as typeof DefaultTheme
 
     const pointBlock = () => {
         setIsPointBlockOpen(!isPointBlockOpen);

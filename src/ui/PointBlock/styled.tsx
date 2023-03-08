@@ -3,8 +3,8 @@ import { StyledBox } from "@/ui/Box/styles/StyledBox";
 import { Property } from "csstype";
 
 type PointBlockContainerPropsType = {
-    bottom: Property.Bottom,
-    left: Property.Left
+    bottom?: Property.Bottom,
+    left?: Property.Left
 }
 export const StyledPointBlockContainer = styled(StyledBox)<PointBlockContainerPropsType>(({ theme, ...props }) => ({
     position: 'absolute',

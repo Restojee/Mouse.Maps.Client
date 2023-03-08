@@ -92,7 +92,7 @@ export const StyledInput = styled.input(({ theme, ...props }) => ({
 type StyledInputIconPropsType = {
     left?: boolean,
     right?: boolean,
-    isOpen: boolean
+    isOpen?: boolean
 }
 export const StyledInputIcon = styled.div<StyledInputIconPropsType>(({ theme, ...props }) => ({
     display: 'flex',

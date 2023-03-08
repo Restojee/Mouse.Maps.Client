@@ -1,25 +1,26 @@
 import React from 'react';
-import EditFillIcon from '../../../assets/icons/svg/EditFillIcon';
-import { IconButton } from '../../../assets/icons/svg/IconsSettings/IconButton';
-import { baseTheme } from '../../../styles/theme';
-import Flex from '../../Flex';
-import ImageForm from '../../ImageForm/ImageForm';
-import { Tag, TagsContainer } from '../../Tag';
-import { Text } from '../../Text';
+import { StyledBox } from "@/ui/Box/styles/StyledBox";
+import { Typography } from '@/ui/Typography/styles/Typography';
+import { useTheme } from "styled-components";
+import { DefaultTheme } from "@/layout/theme/constants";
+import { EditFillIcon } from "@/svg/EditFillIcon";
+import { ImageForm } from "@/ui/ImageForm/ImageForm";
+import { StyledTag, StyledTagsContainer } from "@/ui/Tag/styled";
+import { StyledButtonIcon } from "@/ui/Button/styles/StyledButtonIcon";
 
-function AddMap(props) {
+export const AddMap = () => {
+    const theme = useTheme() as typeof DefaultTheme
+
     return (
-        <Flex gap="15px" direction="column">
+        <StyledBox gap="15px" direction="column">
             <ImageForm />
-            <TagsContainer>
-                <Text>Теги: </Text>
-                <Tag small>Тег</Tag>
-                <IconButton>
-                    <EditFillIcon color={baseTheme.colors.iconOnSecondary} size="20px" />
-                </IconButton>
-            </TagsContainer>
-        </Flex>
+            <StyledTagsContainer>
+                <Typography>Теги: </Typography>
+                <StyledTag small>Тег</StyledTag>
+                <StyledButtonIcon>
+                    <EditFillIcon color={theme.colors.iconOnSecondary} size="20px" />
+                </StyledButtonIcon>
+            </StyledTagsContainer>
+        </StyledBox>
     );
 }
-
-export default AddMap;

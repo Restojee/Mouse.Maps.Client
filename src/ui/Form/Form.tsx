@@ -6,6 +6,7 @@ import {
 } from "@/ui/Form/styled";
 import { Property } from "csstype";
 import { StyledTextarea } from "../Textarea/styled";
+
 type DefaultInputType = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>
 type PropsType = DefaultInputType & {
     readOnly: boolean,
@@ -20,11 +21,10 @@ type PropsType = DefaultInputType & {
     setSearchValue?: (value: string) => void,
     searchForm?: boolean,
     textarea?: boolean,
-
 }
-export default function FormElement(props: any) {
+export default function FormElement(props: Partial<PropsType>) {
     const onClickHandler = () => {
-        props.onClick();
+        props.onClick && props.onClick();
     };
 
     return (

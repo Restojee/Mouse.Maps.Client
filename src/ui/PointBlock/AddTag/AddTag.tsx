@@ -1,16 +1,19 @@
 import React from 'react';
-import DoneRoundIcon from '../../../assets/icons/svg/DoneRoundIcon';
-import { baseTheme } from '../../../styles/theme';
-import Button from '../../Buttons/Button';
-import Flex from '../../Flex';
 import FormElement from '../../Form/Form';
+import { StyledBox } from "@/ui/Box/styles/StyledBox";
+import { Button } from "@/ui/Button/Button";
+import { useTheme } from "styled-components";
+import { DefaultTheme } from "@/layout/theme/constants";
+import { DoneRoundIcon } from "@/svg/DoneRoundIcon";
 
-function AddTag(props) {
+export const AddTag = () => {
+    const theme = useTheme() as typeof DefaultTheme
+
     return (
-        <Flex gap="15px">
+        <StyledBox gap="15px">
             <FormElement placeholder="Введите название..." />
-            <Button bgColor={baseTheme.colors.success} icon={<DoneRoundIcon />} />
-        </Flex>
+            <Button bgColor={theme.colors.status.success} prepend={<DoneRoundIcon />} />
+        </StyledBox>
     );
 }
 

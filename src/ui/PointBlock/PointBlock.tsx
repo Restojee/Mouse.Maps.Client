@@ -1,6 +1,5 @@
 import React from 'react';
 import { Property } from "csstype";
-import AddMap from "@/ui/PointBlock/AddMap/AddMap";
 import AddTag from "@/ui/PointBlock/AddTag/AddTag";
 import {
     StyledPointBlockBody,
@@ -8,17 +7,12 @@ import {
     StyledPointBlockFooter,
     StyledPointBlockHeader
 } from "@/ui/PointBlock/styled";
+import { AddMap } from "@/ui/PointBlock/AddMap/AddMap";
 
-type PointBlockTypes = 'addMap' | 'addTag' | ''
 
 type PointBlockPropsType = {
     type: PointBlockTypes
 }
-
-function get(obj: PointBlockContentType, key: PointBlockTypes) {
-    return obj && key && obj[key] ? obj[key] : {};
-}
-
 export const PointBlock = (props: PointBlockPropsType) => {
     return (
         <PointBlockView
@@ -32,31 +26,41 @@ export const PointBlock = (props: PointBlockPropsType) => {
     );
 }
 
-function PointBlockView({ header, footer, body, bottom, width, left, ...props }) {
+
+type PointBlockViewPropsType = {
+    header: string,
+    body: React.ReactNode,
+    width: Property.Width,
+    left: Property.Left,
+    bottom: Property.Bottom
+    footer: React.ReactNode
+}
+function PointBlockView(props: Partial<PointBlockViewPropsType>) {
     return (
-        <StyledPointBlockContainer left={ left } width={ width } bottom={ bottom }>
-            <StyledPointBlockHeader>{ header }</StyledPointBlockHeader>
-            <StyledPointBlockBody>{ body }</StyledPointBlockBody>
-            <StyledPointBlockFooter>{ footer }</StyledPointBlockFooter>
+        <StyledPointBlockContainer left={ props.left } width={ props.width } bottom={ props.bottom }>
+            <StyledPointBlockHeader>{ props.header }</StyledPointBlockHeader>
+            <StyledPointBlockBody>{ props.body }</StyledPointBlockBody>
+            <StyledPointBlockFooter>{ props.footer }</StyledPointBlockFooter>
         </StyledPointBlockContainer>
     );
 }
 
+
+type PointBlockTypes = 'addMap' | 'addTag'
+
+function get(obj: PointBlockContentType, key: PointBlockTypes) {
+    return obj && key && obj[key] ? obj[key] : {};
+}
+
 type PointBlockContentType = {
-    [key in PointBlockTypes]: {
-        header: string,
-        body: React.ReactNode,
-        width?: Property.Width,
-        left?: Property.Left,
-        bottom?: Property.Bottom
-    };
+    [key in PointBlockTypes]: Partial<PointBlockViewPropsType>;
 };
 export const PointBlockContent: PointBlockContentType = {
     'addMap': {
         header: 'Добавить дополнительные параметры',
         body: <AddMap />,
         width: '230px',
-        bottom: '50px',
+        bottom: '60px',
     },
     'addTag': {
         header: 'Добавить тег',
