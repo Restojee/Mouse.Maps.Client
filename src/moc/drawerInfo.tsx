@@ -1,4 +1,10 @@
-export const infoMoc = [
+type UserStatisticType = {
+    id: number,
+    title: string,
+    date: string,
+    text:  string
+}
+export const infoMoc: UserStatisticType[] = [
     {
         id: 2,
         title: "блаблабла бла бла блабла",

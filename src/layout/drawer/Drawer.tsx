@@ -1,8 +1,9 @@
-import {StyledDrawer} from "@/layout/drawer/styles/StyledDrawer";
 import {ReactNode} from "react";
 import {TabsType} from "@/layout/panel/Panel";
 import {Notifications} from "@/layout/drawer/Notifications/Notifications";
 import {Info} from "@/layout/drawer/Info/Info";
+import { Statistic } from "@/layout/drawer/Statistic/Statistic";
+import { StyledDrawer } from "@/layout/drawer/styled";
 
 type Props = {
     activeTab: TabsType,
@@ -27,7 +28,7 @@ const getTabsContent = (tab: TabsType): ReactNode => {
             tab: 'info',
         },
         {
-            component: <>Статистика</>,
+            component: <Statistic />,
             tab: 'statistic',
         },
         {
