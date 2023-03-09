@@ -2,7 +2,6 @@ import {Avatar} from "@/layout/avatar/Avatar";
 import {NavLink} from "@/layout/navigation/NavLink";
 import {MoonIcon} from "@/svg/MoonIcon";
 import {StyledNavLinkSection} from "@/layout/navigation/styles/StyledNavLinkSection";
-import {StyledPanel} from "@/layout/panel/styles/StyledPanel";
 import {BurgerIcon} from "@/svg/BurgerIcon";
 import {NotificationsIcon} from "@/svg/NotificationIcons";
 import {ChartIcon} from "@/svg/ChartIcon";
@@ -12,8 +11,9 @@ import {SettingsIcon} from "@/svg/SettingsIcon";
 import {LogInIcon} from "@/svg/LogInIcon";
 import {ReactNode} from "react";
 import {Property} from "csstype";
+import { StyledPanel } from "@/layout/panel/styled";
 
-type PanelProps = {
+export type PanelProps = {
     activeTab: string;
     setActiveTab: (tab: TabsType) => void;
     isOpen: boolean;
@@ -77,7 +77,7 @@ export const Panel = (props: PanelProps) => {
     )
 }
 
-const tabsData: TabsDataType[] = [
+export const tabsData: TabsDataType[] = [
     {label: "Уведомления", tab: 'notifications', border: true, icon: <NotificationsIcon />},
     {label: "Полезная инфа", tab: 'info', icon: <PaperIcon />},
     {label: "Статистика", tab: 'statistic', icon: <ChartIcon />},

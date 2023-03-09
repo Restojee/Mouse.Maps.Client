@@ -18,3 +18,13 @@ export const StyledPagePanel = styled.div<Partial<Props>>(props => ({
         borderBottom: "1px solid rgba(0, 0, 0, 0.1)"
     }
 }));
+
+export const StyledPanelPointBlockWrapper = styled.div({
+    position: "relative",
+    display: "flex",
+    justifyContent: "flex-end"
+})
+
+export const StyledPanelPointBlockContainer = styled.div({
+    position: "absolute",
+})

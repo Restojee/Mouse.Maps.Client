@@ -2,9 +2,12 @@ import React, { FC } from 'react';
 import { SvgIconPropsType } from "@/svg/types";
 
 export const AddImageIcon: FC<SvgIconPropsType> = (props) => {
-
+    const onClickHandler = () => {
+        props.onClick && props.onClick();
+    };
     return (
         <svg
+            onClick={onClickHandler}
             width={props.size || '24px'}
             height={props.size || '24px'}
             viewBox="0 0 24 24"

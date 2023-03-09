@@ -7,20 +7,22 @@ export type StyledButtonProps = {
     borderRadius?: Property.BorderRadius;
     fontSize?: Property.FontSize;
     width?: Property.Width;
+    bgColor?: Property.BackgroundColor;
     margin?: string | number;
     size?: 'sm' | 'md' | 'lg';
     isWithError?: boolean;
     isBold?: boolean;
 }
 export const StyledButton = styled.button<StyledButtonProps>(({
-   theme,
-   isBold,
-   justify = "center",
-   backgroundColor = theme.colors.brandColor,
-   size = "md",
-   borderRadius = "10px",
-   width = "min-content",
-   margin = ""
+    theme,
+    isBold,
+    justify = "center",
+    backgroundColor = theme.colors.brandColor,
+    size = "md",
+    bgColor,
+    borderRadius = "10px",
+    width = "min-content",
+    margin = ""
 }) => ({
     justifyContent: justify,
     width: width,

@@ -4,6 +4,7 @@ import {
     StyledButtonProps
 } from "@/ui/Button/styles/StyledButton";
 import { Typography } from "../Typography/styles/Typography";
+import { Property } from "csstype";
 
 type ButtonProps = {
     append?: ReactElement;
@@ -11,6 +12,7 @@ type ButtonProps = {
     label?: string;
     type?: "button" | "submit";
     onClick?: () => void;
+    bgColor?: Property.BackgroundColor
 }
 export const Button = (props: ButtonProps & StyledButtonProps) => {
 
