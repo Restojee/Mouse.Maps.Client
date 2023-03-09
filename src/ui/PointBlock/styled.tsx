@@ -4,7 +4,8 @@ import { Property } from "csstype";
 
 type PointBlockContainerPropsType = {
     bottom?: Property.Bottom,
-    left?: Property.Left
+    left?: Property.Left,
+    isVisible?: boolean
 }
 export const StyledPointBlockContainer = styled(StyledBox)<PointBlockContainerPropsType>(({ theme, ...props }) => ({
     position: 'absolute',
@@ -20,6 +21,11 @@ export const StyledPointBlockContainer = styled(StyledBox)<PointBlockContainerPr
     zIndex: theme.order.other,
     color: theme.colors.textOnSecondary,
     fontSize: theme.font.fontSize,
+    ...props.isVisible && {
+        visibility: "hidden",
+        opacity: 0,
+        pointerEvents: "none"
+    }
 }))
 export const StyledPointBlockHeader = styled(StyledBox)({
     marginBottom: 15

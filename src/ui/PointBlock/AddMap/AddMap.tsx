@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyledBox } from "@/ui/Box/styles/StyledBox";
 import { Typography } from '@/ui/Typography/styles/Typography';
 import { useTheme } from "styled-components";
@@ -10,10 +10,18 @@ import { StyledButtonIcon } from "@/ui/Button/styles/StyledButtonIcon";
 
 export const AddMap = () => {
     const theme = useTheme() as typeof DefaultTheme
+    const [mapImage, setMapImage] = useState<string>('');
+    const onChangePackImage = (file: string) => {
+        setMapImage(file);
+    };
 
     return (
-        <StyledBox gap="15px" direction="column">
-            <ImageForm />
+        <StyledBox width={"100%"} gap="15px" direction="column">
+            <ImageForm
+                fileType={"image"}
+                onChange={onChangePackImage}
+                value={mapImage}
+            />
             <StyledTagsContainer>
                 <Typography>Теги: </Typography>
                 <StyledTag small>Тег</StyledTag>

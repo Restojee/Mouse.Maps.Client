@@ -11,11 +11,13 @@ import { AddMap } from "@/ui/PointBlock/AddMap/AddMap";
 
 
 type PointBlockPropsType = {
-    type: PointBlockTypes
+    type: PointBlockTypes,
+    isVisible: boolean
 }
 export const PointBlock = (props: PointBlockPropsType) => {
     return (
         <PointBlockView
+            isVisible={props.isVisible}
             header={ get(PointBlockContent, props.type).header }
             body={ get(PointBlockContent, props.type).body }
             footer={ get(PointBlockContent, props.type).footer }
@@ -32,12 +34,13 @@ type PointBlockViewPropsType = {
     body: React.ReactNode,
     width: Property.Width,
     left: Property.Left,
-    bottom: Property.Bottom
-    footer: React.ReactNode
+    bottom: Property.Bottom,
+    footer: React.ReactNode,
+    isVisible: boolean
 }
 function PointBlockView(props: Partial<PointBlockViewPropsType>) {
     return (
-        <StyledPointBlockContainer left={ props.left } width={ props.width } bottom={ props.bottom }>
+        <StyledPointBlockContainer isVisible={props.isVisible} left={ props.left } width={ props.width } bottom={ props.bottom }>
             <StyledPointBlockHeader>{ props.header }</StyledPointBlockHeader>
             <StyledPointBlockBody>{ props.body }</StyledPointBlockBody>
             <StyledPointBlockFooter>{ props.footer }</StyledPointBlockFooter>
