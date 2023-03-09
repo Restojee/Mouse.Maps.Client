@@ -12,3 +12,8 @@ export const StyledPanel = styled.div(props => ({
     height: "100%",
     padding: "10px 0"
 }))
+
+export const StyledMobilePanel = styled.div({
+    display: 'flex',
+    padding: 10,
+})
