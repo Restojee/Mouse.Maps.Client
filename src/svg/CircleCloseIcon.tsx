@@ -1,12 +1,10 @@
-import React, { FC } from 'react';
-import { SvgIconPropsType } from "@/svg/types";
+import { SvgIconPropsType } from "@/svg/common/types";
 
-export const CircleCloseIcon: FC<SvgIconPropsType> = ({
+export const CircleCloseIcon = ({
     onClick,
     color = "white",
-    size = 24,
-    ...props
-}) => {
+    size = 24
+}: SvgIconPropsType) => {
     return (
         <svg
             onClick={onClick}

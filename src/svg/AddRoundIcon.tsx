@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
-import { SvgIconPropsType } from "@/svg/types";
+import { SvgIconPropsType } from "@/svg/common/types";
 
-export const AddRoundIcon: FC<SvgIconPropsType> = (props) => {
+export const AddRoundIcon = (props: SvgIconPropsType) => {
     return (
         <svg
             width="24"

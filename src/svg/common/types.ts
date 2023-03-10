@@ -1,5 +1,5 @@
 type SvgIconProps = {
-    size: string,
+    size: string | number,
     height: string,
     color: string,
     rotate: string,

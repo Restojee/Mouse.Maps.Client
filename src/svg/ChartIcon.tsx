@@ -1,7 +1,5 @@
-import React, { FC } from 'react';
-import { SvgIconPropsType } from "@/svg/types";
 
-export const ChartIcon: FC<SvgIconPropsType> = (props) => {
+export const ChartIcon = () => {
     return (
         <svg
             width="24"

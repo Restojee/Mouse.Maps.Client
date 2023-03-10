@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
-import { SvgIconPropsType } from "@/svg/types";
+import { SvgIconPropsType } from "@/svg/common/types";
 
-export const SortIcon: FC<SvgIconPropsType> = (props) => {
+export const SortIcon = (props: SvgIconPropsType) => {
     return (
         <svg
             width="24"

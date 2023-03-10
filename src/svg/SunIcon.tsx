@@ -1,7 +1,5 @@
-import React, { FC } from 'react';
-import { SvgIconPropsType } from "@/svg/types";
 
-export const SunIcon: FC<SvgIconPropsType> = (props) => {
+export const SunIcon = () => {
     return (
         <svg
             width="24"

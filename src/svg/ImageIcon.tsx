@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
-import { SvgIconPropsType } from "@/svg/types";
+import { SvgIconPropsType } from "@/svg/common/types";
 
-export const ImageIcon: FC<SvgIconPropsType> = (props) => {
+export const ImageIcon = (props: SvgIconPropsType) => {
     const { onClick, size = "24px", color = "white" } = props;
     return (
         <svg

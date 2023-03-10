@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
-import { SvgIconPropsType } from "@/svg/types";
+import { SvgIconPropsType } from "@/svg/common/types";
 
-export const LockIcon: FC<SvgIconPropsType> = (props) => {
+export const LockIcon = (props: SvgIconPropsType) => {
     return (
         <svg
             width="24"

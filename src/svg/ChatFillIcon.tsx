@@ -1,7 +1,4 @@
-import React, { FC } from 'react';
-import { SvgIconPropsType } from "@/svg/types";
-
-export const ChatFillIcon: FC<SvgIconPropsType> = (props) => {
+export const ChatFillIcon = () => {
     return (
         <svg
             width="24"

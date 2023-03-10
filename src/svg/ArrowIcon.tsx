@@ -1,7 +1,6 @@
-import React, { FC } from 'react';
-import { SvgIconPropsType } from "@/svg/types";
+import { SvgIconPropsType } from "@/svg/common/types";
 
-export const ArrowIcon: FC<SvgIconPropsType> = (props) => {
+export const ArrowIcon = (props: SvgIconPropsType) => {
     const arrowRotate = {
         transform: `rotate(${props.rotate})`,
         transition: 'transform 150ms ease',
