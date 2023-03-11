@@ -7,11 +7,22 @@ import { StyledMapsGrid } from "@/modules/map/styles/StyledMapsGrid";
 import { useGetMapsQuery } from "@/api/maps";
 import { PageFooter } from "@/layout/page/PageFooter";
 import { mapsData } from "@/moc/mapsMoc";
+import { useState } from "react";
+import { StyledMegaShadow, StyledModalsWrapper } from "@/ui/Modal/styled";
+import { DesktopMapView } from "@/layout/mapView/desktop/DesktopMapView";
 
 export default function Maps() {
 
+    const [isMapViewOpen, setIsMapViewOpen] = useState(false)
+    const [currentMapViewId, setCurrentMapViewId] = useState('')
+
     const { data: maps } = useGetMapsQuery({ page: 0, userId: '1', size: 1 })
     console.log(maps)
+
+    const onMapClickHandler = (id: string) => {
+        setIsMapViewOpen(true);
+        setCurrentMapViewId(id);
+    };
 
     return (
         <Layout>
@@ -26,13 +37,22 @@ export default function Maps() {
                                 commentsCount={ el.commentsCount }
                                 label={ el.label }
                                 image={ el.image }
-                                onClick={() => onClickMap(item.id)}
+                                onClick={() => onMapClickHandler(el.id)}
                             />
                         )) }
                     </StyledMapsGrid>
                 </StyledPageContent>
                 <PageFooter />
             </StyledPageWrapper>
+            {isMapViewOpen && (
+                <StyledModalsWrapper>
+                    <StyledMegaShadow
+                        onClick={() => setIsMapViewOpen(false)}
+                    />
+                    {/* <Modal type="Authorization" /> */}
+                    <DesktopMapView messages={[]} user={'ada'} date={'adad'}/>
+                </StyledModalsWrapper>
+            )}
         </Layout>
     )
 }

@@ -42,3 +42,70 @@ export const mapsData = [
         image: ''
     }
 ]
+
+export const mapTags = [
+    {
+        "id": 0,
+        "label": "тег1"
+    },
+    {
+        "id": 1,
+        "label": "тег1"
+    },
+    {
+        "id": 2,
+        "label": "тег1"
+    },
+    {
+        "id": 3,
+        "label": "тег1"
+    },
+    {
+        "id": 4,
+        "label": "тег1"
+    },
+    {
+        "id": 5,
+        "label": "тег1"
+    }
+]
+
+
+export const mapComments = [
+    {
+        "id": 0,
+        "name": "Nickname",
+        "date": "01.01.2020",
+        "avatar": "https://i.imgur.com/P11sXfz.png",
+        "text": "Lorem ipsum dolor sit amet, consectetur agggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggdipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl tincidunt eget nullam non. Quis hendrerit dolor magna eget est lorem ipsum dolor sit. Volutpat odio facilisis mauris sit amet massa."
+    },
+    {
+        "id": 1,
+        "name": "Nickname",
+        "date": "01.01.2020",
+        "avatar": "https://i.imgur.com/P11sXfz.png",
+        "text": "Lorem ipsum dolor sit amet"
+    },
+    {
+        "id": 2,
+        "name": "Nickname",
+        "date": "01.01.2020",
+        "avatar": "https://i.imgur.com/P11sXfz.png",
+        "text": "Lorem ipsum dolor sit amet"
+    },
+    {
+        "id": 3,
+        "name": "Nickname",
+        "date": "01.01.2020",
+        "avatar": "https://i.imgur.com/P11sXfz.png",
+        "text": "Lorem ipsum dolor sit amet"
+    },
+
+    {
+        "id": 4,
+        "name": "Nickname",
+        "date": "01.01.2020",
+        "avatar": "https://i.imgur.com/P11sXfz.png",
+        "text": "Lorem ipsum dolor sit amet"
+    }
+]

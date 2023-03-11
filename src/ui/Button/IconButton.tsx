@@ -3,10 +3,11 @@ import { Property } from "csstype";
 
 
 type StyledIconButtonPropsType = {
-    opacity: Property.Opacity,
-    margin: Property.Margin,
-    padding: Property.Padding,
-    right: Property.Right
+    opacity?: Property.Opacity,
+    margin?: Property.Margin,
+    padding?: Property.Padding,
+    right?: Property.Right,
+    isAdmin?: boolean
 }
 export const IconButton = styled.div<StyledIconButtonPropsType>(props => ({
     display: 'flex',
