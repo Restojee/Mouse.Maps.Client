@@ -1,10 +1,13 @@
 import {StyledAvatar} from "@/layout/avatar/styles/StyledAvatar";
 import {Property} from "csstype";
+import { StaticImageData } from "next/image";
 
 type Props = {
     size?: Property.Width;
-    image: string;
-    margin?: Property.Margin
+    image?: any;
+    src?: string
+    margin?: Property.Margin;
+    border?: boolean
 }
 export const Avatar = (props: Props) => {
 

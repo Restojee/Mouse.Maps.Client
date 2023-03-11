@@ -1,4 +1,4 @@
-export const drawerStatistic = [
+export const drawerStatisticMoc = [
     {
         "avatar": "https://i.imgur.com/P11sXfz.png",
         "name": "Nickname",

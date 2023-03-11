@@ -18,6 +18,8 @@ export const DefaultTheme = {
 
         neutral: '#F3F2F5',
 
+        mapBackground: '#6b7494',
+
         status: {
             success: '#7fd482',
             danger: '#ff8935',
