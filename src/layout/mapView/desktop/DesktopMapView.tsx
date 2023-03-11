@@ -45,7 +45,7 @@ export const DesktopMapView = (props: PropsType) => {
     return (
         <StyledMapViewContainer>
             <MapViewMainBlock />
-            <StyledMapViewSidebarBlock gap="0">
+            <StyledMapViewSidebarBlock>
                 <StyledBox
                     direction={"column"}
                     align="center"
