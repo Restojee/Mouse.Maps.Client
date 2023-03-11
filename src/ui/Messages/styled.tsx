@@ -54,7 +54,7 @@ export const StyledMessageSendForm = styled.div({
     padding: "10px 0 10px 10px",
 })
 
-export const StyledMessageSendFormTextarea = styled(StyledTextarea)<{ bgColor: Property.BackgroundColor }>(
+export const StyledMessageSendFormTextarea = styled(StyledTextarea)<{ bgColor?: Property.BackgroundColor }>(
     ({ theme, ...props }) => ({
         flexGrow: 1,
         borderRadius: theme.blockSettings.siteBorder,
