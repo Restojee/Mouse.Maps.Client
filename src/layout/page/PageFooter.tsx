@@ -18,25 +18,30 @@ type Props = {
 }
 export const PageFooter = (props: Partial<Props>) => {
     const [isPointBlockOpen, setIsPointBlockOpen] = useState(false);
+    const [isPointBlockSettingsOpen, setIsPointBlockSettingsOpen] = useState(false);
 
     const theme = useTheme() as typeof DefaultTheme
 
-    const pointBlock = () => {
+    const openPointBlockClickHandler = () => {
         setIsPointBlockOpen(!isPointBlockOpen);
+    };
+
+    const addImageClickHandler = () => {
+        setIsPointBlockSettingsOpen(!isPointBlockSettingsOpen);
     };
 
     return (
         <StyledPagePanel top>
             <StyledBox width="100%" justify="space-between">
                 <PagePanelItem
-                    icon={ <AddRoundIcon color={ theme.colors.primary } /> }
+                    icon={ <AddRoundIcon onClick={openPointBlockClickHandler} color={ theme.colors.primary } /> }
                     content={
                         <StyledPanelPointBlockWrapper>
                             <FormElement
-                                rightIcon={ <AddImageIcon onClick={ pointBlock } color="gray" /> }
+                                rightIcon={ <AddImageIcon onClick={ addImageClickHandler } color="gray" /> }
                                 placeholder="Номер карты @123456"
                             />
-                            { <PointBlock isVisible={isPointBlockOpen} type="addMap" /> }
+                            { <PointBlock isVisible={isPointBlockSettingsOpen} type="addMap" /> }
                         </StyledPanelPointBlockWrapper>
                     }
                 />

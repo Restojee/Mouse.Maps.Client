@@ -7,7 +7,7 @@ import { InIcon } from "@/svg/InIcon";
 import { BookCheckFillIcon } from "@/svg/BookCheckFillIcon";
 import { Avatar } from "@/layout/avatar/Avatar";
 import { StyledStatisticIconContainer, StyledStatisticIconText } from "@/layout/drawer/Statistic/styled";
-import { drawerStatistic } from "@/moc/DrawerStatistic";
+import { drawerStatisticMoc } from "@/moc/drawerStatisticMoc";
 import { StyledDrawerBlock, StyledDrawerHeader } from "@/layout/drawer/styled";
 import { SearchForm } from "@/ui/SearchForm/SearchForm";
 
@@ -18,7 +18,7 @@ export const Statistic = () => {
                 Статистика
             </StyledDrawerHeader>
             <SearchForm placeholder="Поиск по нику..." />
-            { drawerStatistic.map((user) => (
+            { drawerStatisticMoc.map((user) => (
                 <StyledDrawerBlock key={ user.name + user.nameId }>
                     <StyledBox align="center">
                         <Avatar size="80px" image={ user.avatar } />

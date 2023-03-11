@@ -3,7 +3,7 @@ import {CloseIcon} from "@/svg/CloseIcon";
 import {StyledButtonIcon} from "@/ui/Button/styles/StyledButtonIcon";
 import {Typography} from "@/ui/Typography/styles/Typography";
 import {StyledBox} from "@/ui/Box/styles/StyledBox";
-import {infoMoc} from "@/moc/drawerInfo";
+import {infoMoc} from "@/moc/drawerInfoMoc";
 import {StyledInfoBlock, StyledInfoList} from "@/layout/drawer/Info/styled";
 import { StyledDrawerHeader } from "@/layout/drawer/styled";
 

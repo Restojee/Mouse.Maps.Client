@@ -3,41 +3,32 @@ import { PageHeader } from "@/layout/page/PageHeader";
 import { StyledPageWrapper } from "@/layout/page/styles/StyledPageWrapper";
 import { StyledPageContent } from "@/layout/page/styles/StyledPageContent";
 import { MapCard } from "@/modules/map/MapCard";
-import {StyledMapsGrid} from "@/modules/map/styles/StyledMapsGrid";
-import {useGetMapsQuery} from "@/api/maps";
+import { StyledMapsGrid } from "@/modules/map/styles/StyledMapsGrid";
+import { useGetMapsQuery } from "@/api/maps";
 import { PageFooter } from "@/layout/page/PageFooter";
+import { mapsData } from "@/moc/mapsMoc";
 
-export default function Maps()  {
+export default function Maps() {
 
-    const {data: maps} = useGetMapsQuery({page: 0, userId: '1', size: 1})
+    const { data: maps } = useGetMapsQuery({ page: 0, userId: '1', size: 1 })
     console.log(maps)
+
     return (
         <Layout>
             <StyledPageWrapper>
                 <PageHeader />
                 <StyledPageContent>
                     <StyledMapsGrid>
-                        <MapCard
-                            key={ 1 }
-                            addedCount={ 5 }
-                            commentsCount={ 5 }
-                            label="Карта 1"
-                            image=""
-                        />
-                        <MapCard
-                            key={ 2 }
-                            addedCount={ 5 }
-                            commentsCount={ 5 }
-                            label="Карта 2"
-                            image=""
-                        />
-                        <MapCard
-                            key={ 3 }
-                            addedCount={ 5 }
-                            commentsCount={ 5 }
-                            label="Карта 3"
-                            image=""
-                        />
+                        { mapsData.map(el => (
+                            <MapCard
+                                key={ el.id }
+                                addedCount={ el.addedCount }
+                                commentsCount={ el.commentsCount }
+                                label={ el.label }
+                                image={ el.image }
+                                onClick={() => onClickMap(item.id)}
+                            />
+                        )) }
                     </StyledMapsGrid>
                 </StyledPageContent>
                 <PageFooter />
