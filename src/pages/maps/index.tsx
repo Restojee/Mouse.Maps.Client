@@ -9,7 +9,7 @@ import { PageFooter } from "@/layout/page/PageFooter";
 import { mapsData } from "@/moc/mapsMoc";
 import { useState } from "react";
 import { StyledMegaShadow, StyledModalsWrapper } from "@/ui/Modal/styled";
-import { DesktopMapView } from "@/layout/mapView/desktop/DesktopMapView";
+import { MapView } from "@/layout/mapView/MapView";
 
 export default function Maps() {
 
@@ -50,7 +50,7 @@ export default function Maps() {
                         onClick={() => setIsMapViewOpen(false)}
                     />
                     {/* <Modal type="Authorization" /> */}
-                    <DesktopMapView messages={[]} user={'ada'} date={'adad'}/>
+                    <MapView />
                 </StyledModalsWrapper>
             )}
         </Layout>
